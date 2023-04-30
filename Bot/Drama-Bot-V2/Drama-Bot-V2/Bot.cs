@@ -1,4 +1,5 @@
-﻿using DSharpPlus;
+﻿using Drama_Bot_V2.Commands;
+using DSharpPlus;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.EventArgs;
 using DSharpPlus.Interactivity;
@@ -41,6 +42,7 @@ namespace Drama_Bot_V2
             // Set the token of the bot within the portion below.
             var config = new DiscordConfiguration()
             {
+                Intents = DiscordIntents.All,
                 Token = configJson.Token,
                 TokenType = TokenType.Bot,
                 // If the connect is interrupted to the bot profile, automatically reconnect.
@@ -63,8 +65,16 @@ namespace Drama_Bot_V2
                 // Allows the prefix to be used.
                 EnableMentionPrefix = true,
                 // Allows the bot to send direct messages to users.
-                EnableDms = true
+                EnableDms = true,
+                // Disable the built in help command.
+                EnableDefaultHelp = false
             };
+
+            // The line enabling commands to be used.
+            Commands = Client.UseCommandsNext(commandsConfig);
+
+            // Tell the bot that the DramaCommands class exists.
+            Commands.RegisterCommands<DramaCommands>();
 
             // Allows the bot to actually come online/establish the connect to the executable.
             await Client.ConnectAsync();

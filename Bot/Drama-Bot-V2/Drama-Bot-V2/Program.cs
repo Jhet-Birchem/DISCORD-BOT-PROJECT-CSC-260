@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Drama_Bot_V2
 {
+    // Video series used to make bot template: https://www.youtube.com/watch?v=YjqoAhtSZU0 (just part one).
     internal class Program
     {
         static void Main(string[] args)
