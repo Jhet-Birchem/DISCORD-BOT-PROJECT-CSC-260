@@ -1,6 +1,7 @@
 ﻿using Drama_Bot_V2.Commands;
 using DSharpPlus;
 using DSharpPlus.CommandsNext;
+using DSharpPlus.Entities;
 using DSharpPlus.EventArgs;
 using DSharpPlus.Interactivity;
 using DSharpPlus.Interactivity.Extensions;
@@ -9,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -49,7 +51,7 @@ namespace Drama_Bot_V2
                 AutoReconnect = true
             };
 
-            // Configure the Client with the "var config" detailed right about this.
+            // Configure the Client with the "var config" detailed right above this.
             Client = new DiscordClient(config);
             Client.UseInteractivity(new InteractivityConfiguration()
             {
