@@ -78,6 +78,9 @@ namespace Drama_Bot_V2
             // Tell the bot that the DramaCommands class exists.
             Commands.RegisterCommands<DramaCommands>();
 
+            // Tell the bot that OldDramaCommand class exists.
+            Commands.RegisterCommands<OldDramaCommand>();
+
             // Allows the bot to actually come online/establish the connect to the executable.
             await Client.ConnectAsync();
             // Prevents the connection from timing out/giving up.

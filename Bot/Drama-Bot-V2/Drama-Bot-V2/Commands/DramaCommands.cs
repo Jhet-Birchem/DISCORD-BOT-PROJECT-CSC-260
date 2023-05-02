@@ -13,24 +13,6 @@ namespace Drama_Bot_V2.Commands
     // Inherit the BaseCommandModule for fundamental command functionality.
     public class DramaCommands : BaseCommandModule
     {
-
-        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-        // Declaring existance of the drama command.
-        [Command("olddrama")]
-
-        // Declaring a method of a command.
-        // NOTE*** ctx represents which channel that the user that used the command.
-        public async Task DramaOld(CommandContext ctx)
-        {
-            //Command writing is done in here.
-
-            //Temp: send a message.
-            await ctx.Channel.SendMessageAsync("Your mom!");
-        }
-
-
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
